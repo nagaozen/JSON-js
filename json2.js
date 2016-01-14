@@ -393,7 +393,6 @@ if (typeof JSON !== 'object') {
 // A default replacer method can be provided. Use of the space parameter can
 // produce text that is more easily readable.
 
-            var i;
             gap = '';
             indent = '';
 
@@ -401,9 +400,7 @@ if (typeof JSON !== 'object') {
 // many spaces.
 
             if (typeof space === 'number') {
-                for (i = 0; i < space; i += 1) {
-                    indent += ' ';
-                }
+                indent = (new Array(space + 1)).join(' ');
 
 // If the space parameter is a string, it will be used as the indent string.
 
